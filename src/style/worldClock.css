@@ -1,0 +1,125 @@
+/* clock style */
+#analog-clock {
+  width: 15em;
+  height: 15em;
+  background-color: var(--them-secondry-color);
+  border-radius: 50%;
+  margin: 5em auto;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* numbers inside the clock */
+.numbers-analog {
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  text-shadow: 0 0 10px #000;
+}
+
+.numbers-analog.analog1 {
+  top: 15%;
+  right: 20%;
+}
+.numbers-analog.analog2 {
+  top: 30%;
+  right: 7%;
+}
+.numbers-analog.analog3 {
+  top: 52%;
+  right: 1%;
+}
+.numbers-analog.analog4 {
+  top: 73%;
+  right: 9%;
+}
+.numbers-analog.analog5 {
+  bottom: 0%;
+  right: 25%;
+}
+.numbers-analog.analog6 {
+  bottom: -4%;
+  left: 49%;
+}
+.numbers-analog.analog7 {
+  top: 88%;
+  left: 28%;
+}
+.numbers-analog.analog8 {
+  top: 72%;
+  left: 13%;
+}
+.numbers-analog.analog9 {
+  top: 50%;
+  left: 6%;
+}
+.numbers-analog.analog10 {
+  top: 30%;
+  left: 14%;
+}
+.numbers-analog.analog11 {
+  top: 13%;
+  left: 28%;
+}
+.numbers-analog.analog12 {
+  top: 7%;
+  left: 50%;
+}
+
+/* hour second and minuts hand */
+#analog-hour,
+#analog-minut,
+#analog-second {
+  position: absolute;
+  width: 2px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 50%;
+}
+
+#analog-hour {
+  width: 0.3em;
+  border-radius: 10px;
+  height: 4em;
+  box-shadow: 0 0 10px #000;
+}
+
+#analog-minut {
+  width: 0.3em;
+  border-radius: 10px;
+  height: 5em;
+  box-shadow: 0 0 10px #000;
+}
+
+#analog-second {
+  height: 6em;
+  width: 0.2em;
+  border-radius: 10px;
+  background-color: var(--them-primery-color);
+  box-shadow: 0 0 10px var(--them-primery-color);
+}
+
+#center-analog-clock {
+  width: 1em;
+  height: 1em;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: var(--them-primery-color);
+  border: 2px solid var(--text-color);
+}
+
+/* digital clock */
+#digital-clock {
+  opacity: 0.5;
+  margin: 2em auto;
+  text-align: center;
+}

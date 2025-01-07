@@ -6,12 +6,59 @@
       rel="icon"
       href="https://t4.ftcdn.net/jpg/01/65/90/27/360_F_165902723_hmEN2uAmoD9DjbCWFcRvi7UTmcUFypxW.jpg"
     />
-    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/worldClock.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Clock</title>
   </head>
-  <body>
-    <!--  -->
 
-    <script type="module" src="/src/main.js"></script>
+  <body>
+    <div id="analog-clock">
+      <span class="numbers-analog analog1">1</span
+      ><span class="numbers-analog analog2">2</span
+      ><span class="numbers-analog analog3">3</span
+      ><span class="numbers-analog analog4">4</span
+      ><span class="numbers-analog analog5">5</span
+      ><span class="numbers-analog analog6">6</span
+      ><span class="numbers-analog analog7">7</span
+      ><span class="numbers-analog analog8">8</span
+      ><span class="numbers-analog analog9">9</span
+      ><span class="numbers-analog analog10">10</span
+      ><span class="numbers-analog analog11">11</span
+      ><span class="numbers-analog analog12">12</span>
+      <div id="center-analog-clock"></div>
+      <div id="analog-hour"></div>
+      <div id="analog-minut"></div>
+      <div id="analog-second"></div>
+    </div>
+
+    <div id="digital-clock">00:00:00-am</div>
+
+    <!-- footer -->
+    <footer>
+      <button><i class="fa-solid fa-bell"></i> <span>Alarm</span></button>
+
+      <button>
+        <i class="fa-solid checked fa-clock"> </i>
+        <span class="checked">Clock</span>
+      </button>
+
+      <button>
+        <i class="fa-solid fa-stopwatch"></i> <span>Stopwatch</span>
+      </button>
+
+      <button>
+        <i class="fa-solid fa-hourglass-end"></i> <span>Timer</span>
+      </button>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,75 @@
+@import url(./worldClock.css);
+
+:root {
+  --background-color: #141414;
+  --text-color: #fafaff;
+  --them-primery-color: #1e90ff;
+  --them-secondry-color: #252525;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* fotter style */
+footer {
+  width: 90%;
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--them-secondry-color);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+footer button span {
+  font-size: 0.5rem;
+  opacity: 0.5;
+}
+footer i {
+  opacity: 0.3;
+  font-size: 1.2rem;
+}
+footer .checked {
+  opacity: 1;
+}
