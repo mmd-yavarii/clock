@@ -101,7 +101,8 @@
   width: 0.2em;
   border-radius: 10px;
   background-color: var(--them-primery-color);
-  box-shadow: 0 0 10px var(--them-primery-color);
+  box-shadow: 0 0 10px 1px var(--them-primery-color);
+  border: 0.1px solid var(--text-color);
 }
 
 #center-analog-clock {
@@ -118,8 +119,12 @@
 }
 
 /* digital clock */
-#digital-clock {
+#digital-clock,
+#digital-utc-clock {
   opacity: 0.5;
-  margin: 2em auto;
+  margin: 0.5em auto;
   text-align: center;
+}
+#digital-clock {
+  margin-top: 2em;
 }
