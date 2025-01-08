@@ -1,4 +1,4 @@
-import { footerComponent } from "./main.js";
+import { footerComponent, navComponent } from "./main.js";
 
 const digitalClockNode = document.querySelector("#digital-clock");
 const hourHand = document.querySelector("#analog-hour");
@@ -34,6 +34,7 @@ const render = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  render();
+  navComponent("Clock");
   footerComponent(1);
+  render();
 });
