@@ -1,4 +1,4 @@
-@import url(./worldClock.css);
+@import url(./clock.css);
 @import url(./alarm.css);
 @import url(./stopwatch.css);
 @import url(./timer.css);
@@ -20,7 +20,7 @@
 
 body {
   background-color: var(--background-color);
-  height: calc(100vh - 1em);
+  height: calc(100vh-1em);
   animation: fadeIn 0.8s ease-in-out;
   max-width: 600px;
   margin: 0 auto;
@@ -60,6 +60,7 @@ footer {
   justify-content: space-around;
   border-radius: 20px;
   max-width: 600px;
+  z-index: 1;
 }
 footer button {
   display: flex;
@@ -69,6 +70,7 @@ footer button {
   gap: 0.5em;
   cursor: pointer;
   transition: transform 0.3s ease;
+  opacity: 0.4;
 }
 footer button:active {
   transform: scale(0.8);
@@ -76,10 +78,8 @@ footer button:active {
 
 footer button span {
   font-size: 0.5rem;
-  opacity: 0.5;
 }
 footer i {
-  opacity: 0.3;
   font-size: 1.2rem;
 }
 footer .checked {

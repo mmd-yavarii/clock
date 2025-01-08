@@ -1,3 +1,5 @@
+import { footerComponent } from "./main.js";
+
 const digitalClockNode = document.querySelector("#digital-clock");
 const hourHand = document.querySelector("#analog-hour");
 const minuteHand = document.querySelector("#analog-minut");
@@ -31,4 +33,7 @@ const render = () => {
   }, 1000);
 };
 
-document.addEventListener("DOMContentLoaded", render);
+document.addEventListener("DOMContentLoaded", () => {
+  render();
+  footerComponent(1);
+});
