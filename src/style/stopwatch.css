@@ -1,0 +1,65 @@
+.page {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 1em;
+    flex-direction: column;
+}
+
+#counter {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* buttons style */
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+.btns button {
+    width: 4em;
+    height: 4em;
+    background-color: var(--them-secondry-color);
+    padding: 1em;
+    border-radius: 50%;
+}
+.btns button i {
+    color: var(--them-primery-color);
+}
+
+#end,
+#pause,
+#log {
+    display: none;
+}
+
+/* log items style */
+#log-container {
+    width: 85%;
+    height: 19em;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#log-container p {
+    margin: 0.4em 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border: 0.5px solid var(--them-secondry-color);
+    border-radius: 10px;
+}
+#log-container p span:first-child {
+    opacity: 0.5;
+    font-size: smaller;
+}
+#log-container p span:last-child {
+    font-weight: bold;
+}

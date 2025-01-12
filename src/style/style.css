@@ -4,124 +4,125 @@
 @import url(./timer.css);
 
 :root {
-  --background-color: #141414;
-  --text-color: #fafaff;
-  --them-primery-color: #1e90ff;
-  --them-secondry-color: #2d2d2d;
-  --box-shadow: #000;
+    --background-color: #141414;
+    --text-color: #fafaff;
+    --them-primery-color: #1e90ff;
+    --them-secondry-color: #2d2d2d;
+    --box-shadow: #000;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: var(--text-color);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 body {
-  background-color: var(--background-color);
-  height: calc(100vh-1em);
-  animation: fadeIn 0.8s ease-in-out;
-  max-width: 600px;
-  margin: 0 auto;
+    background-color: var(--background-color);
+    /* height: calc(100vh - 1em); */
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 input {
-  background-color: transparent;
-  border: none;
-  outline: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.8);
 }
 
 /* fotter style */
 footer {
-  height: 4.2em;
-  width: 90%;
-  position: fixed;
-  bottom: 1em;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--them-secondry-color);
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  max-width: 600px;
-  z-index: 1;
+    height: 4.2em;
+    width: 90%;
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--them-secondry-color);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    max-width: 600px;
+    z-index: 1;
 }
 footer button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5em;
-  transition: transform 0.3s ease;
-  opacity: 0.4;
-}
-footer button:active {
-  transform: scale(0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+    opacity: 0.4;
 }
 
 footer button span {
-  font-size: 0.5rem;
+    font-size: 0.5rem;
 }
 footer i {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 footer .checked {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* nav */
 .nav-title {
-  padding: 1em;
-  background-color: var(--background-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 1em;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dark-mood-btn {
-  width: 3.5em;
-  padding: 0.3em;
-  height: 2em;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  box-shadow: inset 1px 2px 4px var(--box-shadow);
-  background-color: var(--them-secondry-color);
+    width: 3.5em;
+    padding: 0.3em;
+    height: 2em;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 1px 2px 4px var(--box-shadow);
+    background-color: var(--them-secondry-color);
 }
 .dark-mood-btn span {
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background-color: var(--them-primery-color);
-  box-shadow: 0 0 4px var(--box-shadow);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background-color: var(--them-primery-color);
+    box-shadow: 0 0 4px var(--box-shadow);
 }
 
 @media (min-width: 768px) {
-  button {
-    cursor: pointer;
-  }
-
-  button:hover {
-    transform: translateY(-5px);
-    opacity: 1;
-    text-shadow: 0 0 15px var(--box-shadow);
-  }
+    button {
+        cursor: pointer;
+    }
 }

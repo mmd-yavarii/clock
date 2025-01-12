@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="https://upload.wikimedia.org/wikipedia/commons/5/54/Apple_Clock_icon.svg"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/stopwatch.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            href="https://upload.wikimedia.org/wikipedia/commons/5/54/Apple_Clock_icon.svg"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../style/style.css" />
+        <link rel="stylesheet" href="../style/stopwatch.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <title>Stopwatch</title>
-  </head>
+        <title>Stopwatch</title>
+    </head>
 
-  <body>
-    <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/stopwatch.js"></script>
-  </body>
+    <body>
+        <div class="page">
+            <h1 id="counter">00:00.00</h1>
+
+            <div id="log-container"></div>
+
+            <div class="btns">
+                <button id="start"><i class="fa-solid fa-play"></i></button>
+                <button id="pause"><i class="fa-solid fa-pause"></i></button>
+                <button id="end">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+
+                <button id="log"><i class="fa-solid fa-flag"></i></button>
+            </div>
+        </div>
+
+        <script type="module" src="../js/main.js"></script>
+        <script type="module" src="../js/stopwatch.js"></script>
+    </body>
 </html>
