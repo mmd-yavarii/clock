@@ -2,52 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link
-            rel="icon"
-            href="https://upload.wikimedia.org/wikipedia/commons/5/54/Apple_Clock_icon.svg"
-        />
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/54/Apple_Clock_icon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../style/style.css" />
         <link rel="stylesheet" href="../style/timer.css" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <title>Timer</title>
     </head>
 
     <body>
         <!-- set timer -->
-        <div class="timer-container">
-            <input
-                type="number"
-                min="0"
-                max="23"
-                class="timer-imps"
-                id="timer-hour"
-                value="0"
-            />
-            <input
-                type="number"
-                min="0"
-                max="59"
-                class="timer-imps"
-                id="timer-minut"
-                value="0"
-            />
-            <input
-                type="number"
-                min="0"
-                max="50"
-                class="timer-imps"
-                id="timer-second"
-                value="0"
-            />
+        <div class="timer-page">
+            <div class="timer-container">
+                <input type="number" min="0" max="23" class="timer-imps" id="timer-hour" value="0" />
+                <span class="timer-spans">:</span>
+                <input type="number" min="0" max="59" class="timer-imps" id="timer-minut" value="0" />
+                <span class="timer-spans">:</span>
+                <input type="number" min="0" max="50" class="timer-imps" id="timer-second" value="0" />
+            </div>
+
+            <!-- count down page -->
+            <div class="count-down-container">
+                <div>
+                    <p id="countdowner">00:00:00</p>
+                    <button id="timer-pause"><i class="fa-solid fa-pause"></i></button>
+                    <button id="timer-play"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+
+            <!-- start and end btns -->
+            <button id="start-count-down-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="end-count-down-btn"><i class="fa-solid fa-square"></i></button>
         </div>
 
         <script type="module" src="../js/main.js"></script>

@@ -1,21 +1,94 @@
+.timer-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: 80vh;
+}
+
+/* set timer container */
 .timer-container {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding: 0 1em;
     width: fit-content;
     margin: 2em auto;
     margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1em;
+    gap: 0.5em;
+    /* display: none; */
 }
 .timer-imps {
     width: 100%;
     text-align: center;
     font-size: 2rem;
     background-color: var(--them-secondry-color);
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 10px;
 }
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+.timer-spans {
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+/* count down container */
+.count-down-container {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    align-content: center;
+    justify-content: center;
+    display: none;
+}
+.count-down-container > div {
+    width: 70%;
+    height: 70%;
+    background-color: var(--them-secondry-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5rem;
+    position: relative;
+}
+#timer-pause,
+#timer-play {
+    width: 3em;
+    height: 3em;
+    border-radius: 50px;
+    box-shadow: 2px 2px 4px -1px var(--box-shadow), -1px -1px 2px -1.5px var(--box-shadow);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#timer-play {
+    display: none;
+}
+
+/* start button  */
+#start-count-down-btn,
+#end-count-down-btn {
+    width: 7em;
+    padding: 1em;
+    height: fit-content;
+    background-color: var(--them-secondry-color);
+    border-radius: 50px;
+    grid-row: 4;
+    justify-self: center;
+    align-self: center;
+}
+#start-count-down-btn i,
+#end-count-down-btn i {
+    color: var(--them-primery-color);
+}
+
+#end-count-down-btn {
+    display: none;
 }
